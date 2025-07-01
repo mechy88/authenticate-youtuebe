@@ -9,7 +9,6 @@ class SessionsController < ApplicationController
   end
 
   def create
-    # raise
     if user = User.authenticate_by(login_params)
       login user
       redirect_to root_path, notice: "You have signed in successfully"
